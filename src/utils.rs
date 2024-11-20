@@ -11,6 +11,7 @@ pub fn print_devices(devices: Vec<Device>) {
     table.add_row(row![
         "Hostname",
         "Mac Address",
+        "Ethernet MAC Address",
         "IP Address",
         "Serial Number",
         "Associated WLC",
@@ -21,6 +22,7 @@ pub fn print_devices(devices: Vec<Device>) {
         table.add_row(row![
             device.hostname.unwrap_or_else(|| "N/A".to_string()),
             device.macAddress.unwrap_or_else(|| "N/A".to_string()),
+            device.apEthernetMacAddress.unwrap_or_else(|| "N/A".to_string()),
             device
                 .managementIpAddress
                 .unwrap_or_else(|| "N/A".to_string()),

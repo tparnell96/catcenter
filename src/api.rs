@@ -8,6 +8,7 @@ use serde::Deserialize;
 pub struct Device {
     pub hostname: Option<String>,
     pub macAddress: Option<String>,
+    pub apEthernetMacAddress: Option<String>,
     pub managementIpAddress: Option<String>,
     pub serialNumber: Option<String>,
     pub associatedWlcIp: Option<String>,
