@@ -13,6 +13,7 @@ pub fn print_devices(devices: Vec<Device>) {
         "Mac Address",
         "IP Address",
         "Serial Number",
+        "Associated WLC",
         "Software Version"
     ]);
 
@@ -24,6 +25,7 @@ pub fn print_devices(devices: Vec<Device>) {
                 .managementIpAddress
                 .unwrap_or_else(|| "N/A".to_string()),
             device.serialNumber.unwrap_or_else(|| "N/A".to_string()),
+            device.associatedWlcIp.unwrap_or_else(|| "N/A".to_string()),
             device.softwareVersion.unwrap_or_else(|| "N/A".to_string()),
         ]);
     }

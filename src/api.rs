@@ -10,6 +10,7 @@ pub struct Device {
     pub macAddress: Option<String>,
     pub managementIpAddress: Option<String>,
     pub serialNumber: Option<String>,
+    pub associatedWlcIp: Option<String>,
     pub softwareVersion: Option<String>,
     // Add more fields as needed
 }
