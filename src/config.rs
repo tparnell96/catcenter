@@ -73,7 +73,7 @@ fn setup_config() -> Result<Config> {
     let mut username = String::new();
     let mut verify_ssl_input = String::new();
 
-    print!("Enter Cisco DNAC URL (e.g., https://dnac.example.com): ");
+    print!("Enter Cisco DNAC URL without a / at the end(e.g., https://dnac.example.com, https://192.168.1.20): ");
     io::stdout().flush()?;
     io::stdin().read_line(&mut dnac_url)?;
     dnac_url = dnac_url.trim().to_string();
