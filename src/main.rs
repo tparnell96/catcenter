@@ -7,9 +7,6 @@ mod auth;
 mod config;
 mod utils;
 
-// Removed the TUI module import
-// mod tui;
-
 #[derive(Parser)]
 #[command(author, version, about)]
 struct Cli {
@@ -29,7 +26,7 @@ enum Commands {
         #[arg(short, long)]
         all: bool,
     },
-    // Removed the Interactive command
+    // TUI functionality has been removed for now
     // Interactive,
 }
 
@@ -84,13 +81,7 @@ async fn main() {
                     println!("No action specified for Inventory command.");
                 }
             }
-            // Removed handling of Interactive command
-            // Commands::Interactive => {
-            //     if let Err(e) = tui::run(config, token).await {
-            //         error!("TUI encountered an error: {}", e);
-            //         process::exit(1);
-            //     }
-            // }
+            // No TUI command here
         }
     } else {
         println!("No command provided. Use --help for more information.");
