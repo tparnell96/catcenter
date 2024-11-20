@@ -7,6 +7,7 @@ use serde::Deserialize;
 #[derive(Debug, Deserialize)]
 pub struct Device {
     pub hostname: Option<String>,
+    pub macAddress: Option<String>,
     pub managementIpAddress: Option<String>,
     pub serialNumber: Option<String>,
     pub softwareVersion: Option<String>,

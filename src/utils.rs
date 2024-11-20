@@ -10,6 +10,7 @@ pub fn print_devices(devices: Vec<Device>) {
     let mut table = Table::new();
     table.add_row(row![
         "Hostname",
+        "Mac Address",
         "IP Address",
         "Serial Number",
         "Software Version"
@@ -18,6 +19,7 @@ pub fn print_devices(devices: Vec<Device>) {
     for device in devices {
         table.add_row(row![
             device.hostname.unwrap_or_else(|| "N/A".to_string()),
+            device.macAddress.unwrap_or_else(|| "N/A".to_string()),
             device
                 .managementIpAddress
                 .unwrap_or_else(|| "N/A".to_string()),

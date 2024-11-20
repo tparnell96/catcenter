@@ -1,5 +1,5 @@
 [package]
-name = "dnac_tool"
+name = "dnac"
 version = "0.1.0"
 edition = "2021"
 
