@@ -42,6 +42,9 @@ pub async fn get_all_devices(config: &Config, token: &Token) -> Result<Vec<Devic
             .send()
             .await?;
 
+
+
+
         if resp.status() == reqwest::StatusCode::UNAUTHORIZED {
             // Token might be invalid; re-authenticate
             eprintln!("Token expired or invalid. Re-authenticating...");
