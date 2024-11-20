@@ -219,6 +219,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9ac0150caa2ae65ca5bd83f25c7de183dea78d4d366469f148435e2acfbad0da"
 
 [[package]]
+name = "catcenter"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "argon2",
+ "chrono",
+ "clap",
+ "dirs",
+ "env_logger",
+ "log",
+ "prettytable",
+ "rand",
+ "reqwest",
+ "rpassword",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tokio",
+]
+
+[[package]]
 name = "cc"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -447,28 +469,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "dnac"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "argon2",
- "chrono",
- "clap",
- "dirs",
- "env_logger",
- "log",
- "prettytable",
- "rand",
- "reqwest",
- "rpassword",
- "rusqlite",
- "serde",
- "serde_json",
- "serde_yaml",
- "tokio",
 ]
 
 [[package]]

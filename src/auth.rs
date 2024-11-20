@@ -64,7 +64,7 @@ pub async fn authenticate(config: &Config) -> Result<Token> {
     let token_resp: TokenResponse = resp.json().await?;
 
     let obtained_at = utils::current_timestamp();
-    let expires_at = obtained_at + 2 * 60 * 60; // Token valid for 2 hours
+    let expires_at = obtained_at + 1 * 60 * 60; // Token valid for 1 hour
 
     let token = Token {
         value: token_resp.Token,
