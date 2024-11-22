@@ -26,8 +26,6 @@ enum Commands {
         #[arg(short, long)]
         all: bool,
     },
-    // TUI functionality has been removed for now
-    // Interactive,
 }
 
 #[tokio::main]
@@ -81,7 +79,6 @@ async fn main() {
                     println!("No action specified for Inventory command.");
                 }
             }
-            // No TUI command here
         }
     } else {
         println!("No command provided. Use --help for more information.");
