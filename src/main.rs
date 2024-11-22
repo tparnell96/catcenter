@@ -33,7 +33,7 @@ fn main() {
     env_logger::init();
 
     let prompt = DefaultPrompt {
-        left_prompt: DefaultPromptSegment::Basic("dnac-cli".to_owned()),
+        left_prompt: DefaultPromptSegment::Basic("Cat-Center".to_owned()),
         ..DefaultPrompt::default()
     };
 
@@ -56,7 +56,7 @@ fn main() {
                 handle_config(reset);
             }
             CliCommand::Exit => {
-                println!("Exiting DNAC CLI...");
+                println!("Exiting Catalyst Center CLI...");
                 std::process::exit(0);
             }
         }
